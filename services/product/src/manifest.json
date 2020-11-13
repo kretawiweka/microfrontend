@@ -1,0 +1,20 @@
+{
+  "name": "Shopee Payment Preact Application Scaffolding",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EE4D2D",
+  "theme_color": "#EE4D2D",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/sipp/image/upload/w_192/general/branding/shopee/gram/orange.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://res.cloudinary.com/sipp/image/upload/w_512/general/branding/shopee/gram/orange.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

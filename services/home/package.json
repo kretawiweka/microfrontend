@@ -1,0 +1,55 @@
+{
+  "name": "@shopeepayment/preact",
+  "version": "0.1.1",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@shopeepayment/linear": "*",
+    "axios": "*",
+    "build": "*",
+    "build-url": "*",
+    "preact": "*",
+    "preact-router": "*",
+    "react": "*",
+    "react-body-classname": "*",
+    "react-dom": "*",
+    "react-google-login": "^5.1.22"
+  },
+  "devDependencies": {
+    "enzyme": "*",
+    "enzyme-adapter-preact-pure": "*",
+    "eslint": "*",
+    "eslint-config-preact": "*",
+    "jest": "*",
+    "jest-preset-preact": "*",
+    "preact-cli": "npm:preact-cli@^3.0.0-RC.14",
+    "preact-cli-build": "npm:preact-cli@^2.2.1",
+    "preact-render-spy": "*",
+    "prettier": "^2.1.2",
+    "sass": "*",
+    "sass-loader": "^7.3.0",
+    "stylelint": "^13.7.2"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/src/tests/mocks/initialization.js"
+    ],
+    "moduleNameMapper": {
+      "^views(.*)": "<rootDir>/src/views/$1",
+      "^components(.*)": "<rootDir>/src/components/$1",
+      "^stacks(.*)": "<rootDir>/src/stacks/$1",
+      "^libraries(.*)": "<rootDir>/src/libraries/$1",
+      "^tests(.*)": "<rootDir>/src/tests/$1"
+    }
+  },
+  "scripts": {
+    "development": "preact watch --config package.js --no-prerender",
+    "build": "preact build --config package.js --no-prerender",
+    "scriptlint": "prettier --write .",
+    "stylelint": "stylelint '{src/assets/styles, src/assets/styles/views/*/components}/**/*.{css,scss,sass}' --fix",
+    "format": "(yarn scriptlint; yarn stylelint)",
+    "test": "jest --verbose",
+    "lint": "eslint src"
+  }
+}

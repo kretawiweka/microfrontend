@@ -1,0 +1,61 @@
+section {
+    &.table {
+        .container {
+            .row {
+                .column {
+                    .descriptive {
+                        .meta {
+                            margin-bottom: 2em;
+                        }
+
+                        .tabular {
+                            table {
+                                tbody {
+                                    tr {
+                                        td {
+                                            figure {
+                                                img,
+                                                figcaption {
+                                                    display: inline-block;
+                                                }
+
+                                                img {
+                                                    @include shape(circle);
+
+                                                    max-width: 3.5em;
+                                                }
+
+                                                figcaption {
+                                                    position: relative;
+                                                    top: -.5em;
+                                                    margin-left: 2em;
+
+                                                    strong,
+                                                    span {
+                                                        display: block;
+                                                    }
+
+                                                    span {
+                                                        margin-top: .5em;
+                                                    }
+                                                }
+                                            }
+
+                                            button {
+                                                margin-right: .5em;
+
+                                                &:last-child {
+                                                    margin-right: unset;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

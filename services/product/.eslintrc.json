@@ -1,0 +1,40 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["preact"],
+  "plugins": ["react"],
+  "rules": {
+    "semi": [2, "never"],
+    "quotes": [
+      "error",
+      "single",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ],
+    "quote-props": 0,
+    "object-shorthand": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 0,
+    "react/jsx-tag-spacing": 0,
+    "react-hooks/exhaustive-deps": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "overrides": [
+    {
+      "files": ["tests/**/*.spec.js"]
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "*"
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

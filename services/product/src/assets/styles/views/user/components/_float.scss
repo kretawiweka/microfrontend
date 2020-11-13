@@ -1,0 +1,23 @@
+section {
+    &.float {
+        .container {
+            .row {
+                .column {
+                    .descriptive {
+                        .text {
+                            position: fixed;
+                            top: 50%;
+                            left: -3em;
+
+                            small {
+                                display: block;
+                                transform: rotate(-90deg);
+                                letter-spacing: .02em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

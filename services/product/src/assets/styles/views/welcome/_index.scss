@@ -1,0 +1,7 @@
+body {
+    &.index {
+        @import 'components/header';
+
+        background-color: $color-shopee-ecommerce;
+    }
+}
