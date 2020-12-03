@@ -9,8 +9,8 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY component-footer/package.json /usr/src/app/package.json
-COPY component-footer/package-lock.json /usr/src/app/package-lock.json
+COPY components/footer/package.json /usr/src/app/package.json
+COPY components/footer/package-lock.json /usr/src/app/package-lock.json
 
 RUN npm install
 

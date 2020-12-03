@@ -9,8 +9,8 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY component-spa/package.json /usr/src/app/package.json
-COPY component-spa/package-lock.json /usr/src/app/package-lock.json
+COPY services/product/package.json /usr/src/app/package.json
+COPY services/product/package-lock.json /usr/src/app/package-lock.json
 
 RUN npm install 
 #RUN npm install react-router-dom

@@ -1,7 +1,7 @@
 version: "3.5"
 
 services:
-  component-footer:
+  footer:
     container_name: footer
     build:
       context: ./
@@ -10,7 +10,7 @@ services:
       - "/usr/src/app/node_modules"
       - "./footer:/usr/src/app/"
     ports:
-      - "3334:3333"
+      - "3333:3333"
     environment:
       - NODE_ENV=development
 
@@ -18,13 +18,10 @@ services:
     container_name: home
     build:
       context: ./
-      dockerfile: component-spa/Dockerfile
+      dockerfile: services/home/Dockerfile
     volumes:
-      - ./component-spa:/usr/src/app/
+      - ./home:/usr/src/app/
       - "/usr/src/app/node_modules"
-      - ./component-demoincdec/dist:/usr/src/app/public/components/component-demoincdec
-      - ./component-footer/dist:/usr/src/app/public/components/component-footer
-      - ./component-header/dist:/usr/src/app/public/components/component-header
     ports:
       - "9999:3000"
     environment:
@@ -36,13 +33,10 @@ services:
       context: ./
       dockerfile: component-spa/Dockerfile
     volumes:
-      - ./component-spa:/usr/src/app/
+      - ./product:/usr/src/app/
       - "/usr/src/app/node_modules"
-      - ./component-demoincdec/dist:/usr/src/app/public/components/component-demoincdec
-      - ./component-footer/dist:/usr/src/app/public/components/component-footer
-      - ./component-header/dist:/usr/src/app/public/components/component-header
     ports:
-      - "9999:3000"
+      - "9998:3001"
     environment:
       - NODE_ENV=development
 
@@ -53,6 +47,3 @@ services:
     working_dir: /var/www
     ports:
       - 8080:80
-
-volumes:
-  dbdata:
